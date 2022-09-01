@@ -1,9 +1,17 @@
 pipeline {
   agent any
   stages {
-    stage('stage 1') {
-      steps {
+    stage('stage 1')
+    {
+      steps
+      {
         sh 'env | sort'
+      }
+      stage('Email')
+      {
+      steps
+      {
+        emailext body: 'env_pipeline', subject: 'env', to: 'parthasarathi.parandhaman@gmail.com'
       }
     }
   }

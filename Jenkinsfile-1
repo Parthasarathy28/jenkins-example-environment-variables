@@ -1,12 +1,15 @@
-pipeline {
+pipeline
+{
   agent any
-  stages {
+  stages
+  {
     stage('stage 1')
     {
       steps
       {
         sh 'env | sort'
       }
+     }
       stage('Email')
       {
       steps
